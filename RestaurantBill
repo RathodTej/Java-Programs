@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Ca1AS3_restaurantBill {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of MEALS You Have");
+        int n=sc.nextInt();
+        float c=(44.50f*n);
+        float t=(6.75f*(44.50f))/100;
+        float T=(t*n);
+        float tip=15*(c+T)/100;
+        float total = c+T+tip;
+
+        System.out.println("RS.44.50 PER MEAL");
+        System.out.println("YOUR MEAL COST FOR "+n+" MEAL IS:: "+c);
+        System.out.println("TAX :: "+T);
+        System.out.println("TIP :: "+tip);
+        System.out.println("TOTAL AMOUNT:: "+total);
+    }
+}
