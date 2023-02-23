@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the sixe of array::");
+        int s=sc.nextInt();
+        int c=0,c1=0;
+        
+         System.out.println("Enter the elements::");
+        String arr[]=new String[s];
+        for(int i=0;i<s;i++)
+        {
+            arr[i]=sc.next();
+        }
+        
+        for(int i=0;i<s;i++)
+        {
+            String x=arr[i];
+            for(int j=0;j<x.length();j++)
+            {
+                if (Character.isDigit(arr[i].charAt(j))) { 
+                 c1++;
+                break; 
+                    }
+           else{
+                c++;
+                break;
+                }
+            }
+        }   
+        System.out.println("NUMBER OF NUMS:"+c1);
+        System.out.println("NUMBER OF STRINGs:"+c);    
+    }
+}
